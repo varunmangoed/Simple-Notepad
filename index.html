@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="sidebar">
+            <button id="new-note">New Note</button>
+            <div id="saved-notes">
+                <h3>Saved Notes</h3>
+                <!-- List of saved notes will be appended here -->
+            </div>
+            <div id="settings">
+                <h3>Settings</h3>
+                <label for="font-size">Font Size:</label>
+                <input type="range" id="font-size" name="font-size" min="12" max="36" value="18">
+                <label for="font-family">Font:</label>
+                <select id="font-family" name="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+            </div>
+            <div id="trash">
+                <h3>Trash</h3>
+                <button id="empty-trash" class="delete-button">Empty Trash</button>
+                <!-- Trash items will be placed here -->
+            </div>
+            <button id="save-note" class="save-button">Save Note</button>
+        </div>
+        <div class="editor">
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea id="note-content" placeholder="Write your note here..."></textarea>
+            <button id="delete-note" class="delete-button">Delete Note</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
